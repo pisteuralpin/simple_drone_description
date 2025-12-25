@@ -1,15 +1,16 @@
 <?xml version="1.0"?>
 <robot name="x3">
 
-  <!-- Lien racine sans inertie -->
+  <!-- Inertia-free root link -->
   <link name="dummy_link"/>
 
   <joint name="dummy_joint" type="fixed">
     <parent link="dummy_link"/>
     <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
-  <!-- Base du drone -->
+  <!-- Drone frame -->
   <link name="base_link">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -35,7 +36,6 @@
   <!-- Rotor 0 -->
   <link name="rotor_0">
     <visual>
-      <!-- rotor centré dans son propre frame -->
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://pisteur_drone_description/meshes/propeller_ccw.dae"
@@ -58,7 +58,6 @@
   <joint name="rotor_0_joint" type="continuous">
     <parent link="base_link"/>
     <child link="rotor_0"/>
-    <!-- position du rotor par rapport à base_link (prise du SDF) -->
     <origin xyz="0.13 -0.22 0.023" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
   </joint>
