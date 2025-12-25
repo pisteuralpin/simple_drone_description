@@ -1,4 +1,8 @@
 # Simple Drone - Description package
+[![ROS2](https://img.shields.io/badge/ROS2-Jazzy-green)](https://docs.ros.org/en/jazzy/index.html)
+[![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-orange)](http://gazebosim.org/)
+[![License](https://img.shields.io/badge/License-GNU--3..0-blue)](#license)
+
 Simple Drone are ROS2 packages designed for simulating drones in a Gazebo environment. This package provides models and physics properties for drones.
 
 Models from [Gazebo Fuel](https://app.gazebosim.org/OpenRobotics/fuel/models/X3%20UAV).
