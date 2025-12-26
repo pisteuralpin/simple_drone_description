@@ -4,7 +4,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
-    pkg_share = FindPackageShare('pisteur_drone_description').find('pisteur_drone_description')
+    pkg_share = FindPackageShare('simple_drone_description').find('simple_drone_description')
     urdf_file = os.path.join(pkg_share, 'urdf', 'x3.urdf')
     rviz_config = os.path.join(pkg_share, 'rviz', 'x3.rviz')
 
